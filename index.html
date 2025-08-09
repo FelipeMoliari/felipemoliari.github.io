@@ -1,12 +1,323 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Felipe Moliari - Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe Moliari Barbosa - Desenvolvedor Full-Stack</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <a href="./projects/index.html">Projects</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Felipe<span class="accent">.</span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experiência</a></li>
+                <li><a href="#projects" class="nav-link">Projetos</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Olá, eu sou</span>
+                        <span class="name">Felipe Moliari Barbosa</span>
+                        <span class="role">Desenvolvedor Full-Stack</span>
+                    </h1>
+                    <p class="hero-description">
+                        Criando soluções digitais que unem funcionalidade, inovação e escalabilidade. 
+                        Especializado em desenvolvimento web moderno com foco em qualidade e resultados.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                        <a href="#contact" class="btn btn-secondary">Contato</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-animation">
+                        <div class="code-line"></div>
+                        <div class="code-line"></div>
+                        <div class="code-line"></div>
+                        <div class="code-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Sou desenvolvedor de software e busco criar soluções digitais que unem 
+                        funcionalidade, inovação e escalabilidade. Tenho um perfil proativo e orientado 
+                        a resultados, prezando sempre pela qualidade, organização e cumprimento de prazos.
+                    </p>
+                    <p>
+                        Atualmente, busco minha primeira oportunidade profissional na área de tecnologia, 
+                        com o intuito de aplicar meus conhecimentos, enfrentar novos desafios e contribuir 
+                        para projetos que gerem valor e impacto positivo para pessoas e empresas.
+                    </p>
+                    <div class="education">
+                        <h3>Educação</h3>
+                        <div class="education-item">
+                            <h4>Bacharelado em Sistemas de Informação</h4>
+                            <p>Cefet/RJ - Centro Federal de Educação Tecnológica Celso Suckow da Fonseca</p>
+                            <span class="period">2025 - 2029 (previsão de conclusão)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Front-end</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Back-end</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Banco de dados</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Versionamento e Colaboração</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-gitlab"></i>
+                            <span>GitLab</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experiência</h2>
+            <div class="experience-content">
+                <div class="experience-item">
+                    <h3>Desenvolvimento de Projetos Autorais</h3>
+                    <p class="experience-description">
+                        Participei do desenvolvimento de diversos projetos autorais, conduzindo todas 
+                        as etapas: desde a concepção da ideia, design e prototipação até a 
+                        implementação e hospedagem.
+                    </p>
+                </div>
+                <div class="experience-item">
+                    <h3>Projetos Freelancer e Acadêmicos</h3>
+                    <p class="experience-description">
+                        Entre esses projetos, alguns foram realizados como freelancer, outros para 
+                        aprimorar conhecimentos em novas tecnologias e também para entregas acadêmicas.
+                    </p>
+                </div>
+                <div class="experience-item">
+                    <h3>Aperfeiçoamento Contínuo</h3>
+                    <p class="experience-description">
+                        Todas as tecnologias citadas já foram aplicadas na prática em diferentes 
+                        projetos, e sigo me aperfeiçoando continuamente para elevar a qualidade e 
+                        eficiência das minhas entregas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projetos Desenvolvidos</h2>
+            <p class="projects-subtitle">Principais projetos criados com design moderno e funcionalidades avançadas</p>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Snake Game Futurista</h3>
+                    <p>Jogo da cobrinha completamente reimaginado com visual neon cyberpunk, sistema de power-ups avançado, ranking persistente e interface totalmente responsiva. Desenvolvido com foco na experiência do usuário em qualquer dispositivo.</p>
+                    <div class="project-features">
+                        <span class="feature">🎮 Gameplay Aprimorado</span>
+                        <span class="feature">✨ Visual Neon Cyberpunk</span>
+                        <span class="feature">🏆 Sistema de Ranking</span>
+                        <span class="feature">📱 Design Responsivo</span>
+                        <span class="feature">⚡ Power-ups Especiais</span>
+                        <span class="feature">🎨 Scrolls Customizados</span>
+                    </div>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Canvas API</span>
+                        <span>Responsive Design</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://snake-game-felipemoliaris-projects.vercel.app/" class="project-link" target="_blank">Ver Demo</a>
+                        <a href="https://github.com/FelipeMoliari/snake-game" class="project-link" target="_blank">Código</a>
+                    </div>
+                </div>
+                <div class="project-card featured">
+                    <div class="project-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Sistema de Biblioteca Digital</h3>
+                    <p>Gerenciador completo de biblioteca com catálogo de livros, sistema de empréstimos, controle de usuários, relatórios e dashboard administrativo. Interface moderna com busca avançada e filtros.</p>
+                    <div class="project-features">
+                        <span class="feature">📚 Catálogo Completo</span>
+                        <span class="feature">👥 Gestão de Usuários</span>
+                        <span class="feature">📊 Dashboard Admin</span>
+                        <span class="feature">🔍 Busca Avançada</span>
+                    </div>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Node.js</span>
+                        <span>SQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Ver Demo</a>
+                        <a href="#" class="project-link">Código</a>
+                    </div>
+                </div>
+                <div class="project-card featured">
+                    <div class="project-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Jogo da Memória Futurista</h3>
+                    <p>Jogo da memória com design cyberpunk, múltiplos níveis de dificuldade, efeitos visuais impressionantes, sons futuristas e sistema de conquistas. Interface holográfica com animações 3D.</p>
+                    <div class="project-features">
+                        <span class="feature">🎨 Design Cyberpunk</span>
+                        <span class="feature">🎵 Sons Futuristas</span>
+                        <span class="feature">🏅 Sistema de Conquistas</span>
+                        <span class="feature">🔮 Efeitos Holográficos</span>
+                    </div>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>CSS Animations</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Ver Demo</a>
+                        <a href="#" class="project-link">Código</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/FelipeMoliari" target="_blank">github.com/FelipeMoliari</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <a href="https://linkedin.com/in/felipemoliari" target="_blank">linkedin.com/in/felipemoliari</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:felipemoliaribarbosa@gmail.com">felipemoliaribarbosa@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Telefone</h3>
+                            <a href="https://wa.me/5522981127385">(22) 98112-7385</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Felipe Moliari Barbosa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
