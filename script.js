@@ -1,4 +1,3 @@
-// Theme Toggle Functionality
 class ThemeManager {
     constructor() {
         this.themeToggle = document.getElementById('themeToggle');
@@ -9,10 +8,8 @@ class ThemeManager {
     }
     
     init() {
-        // Set initial theme
         this.setTheme(this.currentTheme);
         
-        // Add event listener
         this.themeToggle.addEventListener('click', () => this.toggleTheme());
     }
     
@@ -35,7 +32,6 @@ class ThemeManager {
     }
 }
 
-// Smooth Scrolling for Navigation Links
 class SmoothScroll {
     constructor() {
         this.navLinks = document.querySelectorAll('.nav-link');
@@ -62,7 +58,6 @@ class SmoothScroll {
     }
 }
 
-// Mobile Navigation
 class MobileNav {
     constructor() {
         this.hamburger = document.querySelector('.hamburger');
@@ -75,7 +70,6 @@ class MobileNav {
     init() {
         this.hamburger.addEventListener('click', () => this.toggleMenu());
         
-        // Close menu when clicking on a link
         this.navLinks.forEach(link => {
             link.addEventListener('click', () => this.closeMenu());
         });
@@ -92,7 +86,6 @@ class MobileNav {
     }
 }
 
-// Scroll Animations
 class ScrollAnimations {
     constructor() {
         this.observerOptions = {
@@ -104,13 +97,11 @@ class ScrollAnimations {
     }
     
     init() {
-        // Create intersection observer
         this.observer = new IntersectionObserver(
             (entries) => this.handleIntersection(entries),
             this.observerOptions
         );
         
-        // Observe elements
         const animatedElements = document.querySelectorAll(
             '.skill-category, .experience-item, .project-card, .contact-item'
         );
@@ -130,7 +121,6 @@ class ScrollAnimations {
     }
 }
 
-// Navbar Scroll Effect
 class NavbarScroll {
     constructor() {
         this.navbar = document.querySelector('.navbar');
@@ -172,7 +162,6 @@ class NavbarScroll {
     }
 }
 
-// Typing Animation for Hero Section
 class TypingAnimation {
     constructor() {
         this.roleElement = document.querySelector('.role');
@@ -221,7 +210,6 @@ class TypingAnimation {
     }
 }
 
-// Particle Background Effect
 class ParticleBackground {
     constructor() {
         this.canvas = this.createCanvas();
@@ -275,25 +263,21 @@ class ParticleBackground {
     animate() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         
-        // Update and draw particles
         this.particles.forEach(particle => {
             particle.x += particle.vx;
             particle.y += particle.vy;
             
-            // Wrap around edges
             if (particle.x < 0) particle.x = this.canvas.width;
             if (particle.x > this.canvas.width) particle.x = 0;
             if (particle.y < 0) particle.y = this.canvas.height;
             if (particle.y > this.canvas.height) particle.y = 0;
             
-            // Draw particle
             this.ctx.beginPath();
             this.ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
             this.ctx.fillStyle = this.getParticleColor();
             this.ctx.fill();
         });
         
-        // Draw connections
         this.drawConnections();
         
         requestAnimationFrame(() => this.animate());
@@ -332,7 +316,6 @@ class ParticleBackground {
     }
 }
 
-// Project Cards Hover Effect
 class ProjectCards {
     constructor() {
         this.cards = document.querySelectorAll('.project-card');
@@ -355,9 +338,7 @@ class ProjectCards {
     }
 }
 
-// Initialize all components when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize all components
     new ThemeManager();
     new SmoothScroll();
     new MobileNav();
@@ -367,7 +348,6 @@ document.addEventListener('DOMContentLoaded', () => {
     new ParticleBackground();
     new ProjectCards();
     
-    // Add loading animation to initial elements
     const heroElements = document.querySelectorAll('.hero-text > *');
     heroElements.forEach((el, index) => {
         el.style.opacity = '0';
@@ -381,7 +361,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Add CSS for mobile navigation
 const mobileNavCSS = `
 @media (max-width: 768px) {
     .nav-menu {
@@ -421,12 +400,10 @@ const mobileNavCSS = `
 }
 `;
 
-// Inject mobile navigation CSS
 const style = document.createElement('style');
 style.textContent = mobileNavCSS;
 document.head.appendChild(style);
 
-// Smooth scroll polyfill for older browsers
 if (!('scrollBehavior' in document.documentElement.style)) {
     const smoothScrollPolyfill = () => {
         const links = document.querySelectorAll('a[href^="#"]');
@@ -470,7 +447,6 @@ if (!('scrollBehavior' in document.documentElement.style)) {
     smoothScrollPolyfill();
 }
 
-// Performance optimization: Throttle scroll events
 const throttle = (func, limit) => {
     let inThrottle;
     return function() {
@@ -484,7 +460,4 @@ const throttle = (func, limit) => {
     };
 };
 
-// Apply throttling to scroll events
-window.addEventListener('scroll', throttle(() => {
-    // Any additional scroll-based functionality can be added here
-}, 16)); // ~60fps
+window.addEventListener('scroll', throttle(() => {}, 16));
