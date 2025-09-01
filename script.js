@@ -46,7 +46,7 @@ class SmoothScroll {
                 const targetSection = document.querySelector(targetId);
                 
                 if (targetSection) {
-                    const offsetTop = targetSection.offsetTop - 70; // Account for fixed navbar
+                    const offsetTop = targetSection.offsetTop - 70;
                     
                     window.scrollTo({
                         top: offsetTop,
