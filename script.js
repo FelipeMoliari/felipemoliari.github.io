@@ -460,4 +460,5 @@ const throttle = (func, limit) => {
     };
 };
 
+
 window.addEventListener('scroll', throttle(() => {}, 16));
