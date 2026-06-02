@@ -7,5 +7,5 @@
         "noEmitOnError": true,
         "skipLibCheck": true
     },
-    "include": ["vue-app.ts"]
+    "include": ["assets/js/vue-app.ts"]
 }

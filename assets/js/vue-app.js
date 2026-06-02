@@ -1,3 +1,5 @@
+"use strict";
+const { createApp, computed, ref } = Vue;
 const techs = [
     {
         id: 'vue',
@@ -56,15 +58,12 @@ const techs = [
         icon: 'fab fa-node-js'
     }
 ];
-
-const activeTechId = Vue.ref(techs[0]?.id ?? '');
-const activeTech = Vue.computed(() => techs.find((tech) => tech.id === activeTechId.value) ?? null);
-
+const activeTechId = ref(techs[0]?.id ?? '');
+const activeTech = computed(() => techs.find((tech) => tech.id === activeTechId.value) ?? null);
 const selectTech = (id) => {
     activeTechId.value = id;
 };
-
-Vue.createApp({
+createApp({
     setup() {
         return {
             techs,
