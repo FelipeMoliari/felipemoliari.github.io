@@ -123,6 +123,20 @@ const techs: Tech[] = [
         icon: 'fab fa-php'
     },
     {
+        id: 'docker',
+        name: 'Docker',
+        category: 'DevOps',
+        level: 'Básico',
+        summary: 'Containerização de aplicações para ambientes portáveis e reproduzíveis.',
+        highlights: [
+            'Criação e execução de containers com Dockerfile.',
+            'Gerenciamento de serviços com Docker Compose.',
+            'Isolamento de ambientes de desenvolvimento e produção.'
+        ],
+        iconType: 'font',
+        icon: 'fab fa-docker'
+    },
+    {
         id: 'azure-devops',
         name: 'Azure DevOps',
         category: 'DevOps',
