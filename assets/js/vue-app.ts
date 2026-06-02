@@ -50,7 +50,7 @@ const techs: Tech[] = [
             'Documentação implícita através das tipagens.'
         ],
         iconType: 'image',
-        icon: 'https://cdn.simpleicons.org/typescript/3178c6'
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg'
     },
     {
         id: 'javascript',
@@ -79,6 +79,62 @@ const techs: Tech[] = [
         ],
         iconType: 'font',
         icon: 'fab fa-node-js'
+    },
+    {
+        id: 'react',
+        name: 'React',
+        category: 'Front-end',
+        level: 'Intermediário',
+        summary: 'Interfaces baseadas em componentes com gerenciamento eficiente de estado.',
+        highlights: [
+            'Construção de SPAs com componentização e hooks.',
+            'Gerenciamento de estado com Context API e useState.',
+            'Integração com APIs REST e bibliotecas do ecossistema React.'
+        ],
+        iconType: 'font',
+        icon: 'fab fa-react'
+    },
+    {
+        id: 'java',
+        name: 'Java',
+        category: 'Back-end',
+        level: 'Intermediário',
+        summary: 'Desenvolvimento back-end orientado a objetos com tipagem forte e robustez.',
+        highlights: [
+            'Aplicação de orientação a objetos e design patterns.',
+            'Desenvolvimento de aplicações back-end e sistemas acadêmicos.',
+            'Uso de Collections, tratamento de exceções e I/O.'
+        ],
+        iconType: 'font',
+        icon: 'fab fa-java'
+    },
+    {
+        id: 'php',
+        name: 'PHP',
+        category: 'Back-end',
+        level: 'Intermediário',
+        summary: 'Desenvolvimento back-end server-side para aplicações web dinâmicas.',
+        highlights: [
+            'Criação de páginas e APIs dinâmicas com PHP puro.',
+            'Manipulação de formulários, sessões e cookies.',
+            'Integração com banco de dados via PDO e MySQLi.'
+        ],
+        iconType: 'font',
+        icon: 'fab fa-php'
+    },
+    {
+        id: 'azure-devops',
+        name: 'Azure DevOps',
+        category: 'DevOps',
+        level: 'Básico',
+        summary: 'Gestão de pipelines, boards e repositórios dentro do ecossistema Microsoft.',
+        highlights: [
+            'Organização de tarefas e sprints com Azure Boards.',
+            'Versionamento de código com Azure Repos.',
+            'Configuração básica de pipelines de CI/CD.'
+        ],
+        iconType: 'image',
+        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuredevops/azuredevops-original.svg'
     }
 ];
 

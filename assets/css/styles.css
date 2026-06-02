@@ -502,6 +502,21 @@ body {
     display: block;
 }
 
+.tech-icon-mask {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: white;
+    -webkit-mask-image: var(--icon-url);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: var(--icon-url);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
 .tech-card h4 {
     color: var(--text-primary);
     font-size: 1.1rem;
@@ -602,10 +617,20 @@ body {
 }
 
 .skill-item .skill-icon {
-    width: 24px;
-    height: 24px;
+    width: 21px;
+    height: 21px;
     display: inline-block;
     flex-shrink: 0;
+    background-color: var(--accent-primary);
+    -webkit-mask-image: var(--icon-url);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: var(--icon-url);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: background-color var(--transition-fast);
 }
 
 .skill-item:hover i {
@@ -613,7 +638,7 @@ body {
 }
 
 .skill-item:hover .skill-icon {
-    filter: brightness(0) invert(1);
+    background-color: white;
 }
 
 .experience {

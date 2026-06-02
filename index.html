@@ -117,7 +117,11 @@
                             <span>Vue.js</span>
                         </div>
                         <div class="skill-item">
-                            <img class="skill-icon" src="https://cdn.simpleicons.org/typescript/3178c6" alt="TypeScript">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon" style="--icon-url:url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg')" aria-hidden="true"></span>
                             <span>TypeScript</span>
                         </div>
                     </div>
@@ -128,6 +132,14 @@
                         <div class="skill-item">
                             <i class="fab fa-node-js"></i>
                             <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
                         </div>
                     </div>
                 </div>
@@ -155,6 +167,10 @@
                             <i class="fab fa-gitlab"></i>
                             <span>GitLab</span>
                         </div>
+                        <div class="skill-item">
+                            <span class="skill-icon" style="--icon-url:url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuredevops/azuredevops-original.svg')" aria-hidden="true"></span>
+                            <span>Azure DevOps</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -176,7 +192,7 @@
                     >
                         <div class="tech-card-header">
                             <div class="tech-icon">
-                                <img v-if="tech.iconType === 'image'" :src="tech.icon" :alt="tech.name + ' logo'">
+                                <span v-if="tech.iconType === 'image'" class="tech-icon-mask" :style="{ '--icon-url': 'url(' + tech.icon + ')' }" aria-hidden="true"></span>
                                 <i v-else :class="tech.icon"></i>
                             </div>
                             <div>
